@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -42,11 +45,12 @@
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
             font-size: 1.4vw;
-            text-shadow: 1px 1px 2px wheat;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
         
         li a:hover {
             background-image: linear-gradient(rgb(75, 70, 70), black);
+            text-decoration: underline;
         }
         
         @media screen and (max-width: 400px) {
@@ -56,96 +60,43 @@
             }
         }
         
-        .sidenav {
-            box-sizing: border-box;
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: whitesmoke;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            border-right: 1px solid black;
-        }
-        
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            display: block;
-            transition: 0.3s;
-        }
-        
-        .sidenav a:hover {
-            color: rgb(28, 28, 184);
-            background-color: rgb(199, 194, 194);
-        }
-        
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 0px;
-            padding: 14.73px 16px;
-            font-size: 1.8vw;
-            margin-left: 50px;
-        }
-        
-        .closebtn:hover {
-            background-image: linear-gradient(rgb(75, 70, 70), black);
-        }
-        
-        .closebtn {
-            background-image: linear-gradient(180deg, rgb(48, 45, 45), black);
-            color: white !important;
+        .search-container button {
             float: right;
-            display: block;
-            width: 100%;
-            left: 120px;
-            border-radius: 60em/100em;
-            z-index: 2
-        }
-        
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-        
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-            .sidenav a {
-                font-size: 18px;
-            }
-        }
-        
-        .sidenav-button:hover {
-            background-image: linear-gradient(rgb(75, 70, 70), black);
-        }
-        
-        .sidenav-button {
-            box-sizing: border-box;
-            padding: 11px 16px;
-            font-size: 2vw;
+            padding: 6px 10px;
+            margin-top: 10px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 1.6vw;
+            border: none;
             cursor: pointer;
-            color: white;
+            border: 2px groove black;
         }
         
-        .btn.active {
-            background-color: #111;
-            color: white;
+        .search-container {
+            float: right;
         }
         
-        .sidenav-content a {
-            color: black;
+        input[type=text] {
+            font-family: 'Open Sans', sans-serif;
+            padding: 6px;
+            margin-top: 10px;
+            font-size: 1.4vw;
+            border: 2px groove black;
+        }
+        
+        .shop-title {
+            position: relative;
+            font-family: 'Archivo', sans-serif;
+            color: white;
+            left: 25%;
+            margin-top: 1vw;
+            font-size: 1.9em;
+            letter-spacing: 0.2em;
         }
         
         .swiper-container {
             width: 100%;
-            height: 60vh;
+            height: 80vh;
         }
         
         .swiper-slide {
@@ -172,13 +123,108 @@
             background-size: cover;
         }
         
-        .swiper-slide-text {
-            font-size: 5vw;
+        .swiper-slide-text-1 {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            width: 25vw;
+            background-color: black;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            left: 2%;
+            top: 2%;
+        }
+        
+        .swiper-slide-text-1 p {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-1 h1 {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-2 {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            width: 23vw;
+            background-color: black;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            right: 2%;
+            top: 2%;
+        }
+        
+        .swiper-slide-text-2 p {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-2 h1 {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-3 {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            width: 80vw;
+            height: 20vh;
+            background-color: black;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            bottom: -1%;
+        }
+        
+        .swiper-slide-text-3 p {
+            font-size: 0.3em;
+        }
+        
+        .swiper-slide-text-3 h1 {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-4 {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            width: 25vw;
+            background-color: black;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            left: 2%;
+            top: 2%;
+        }
+        
+        .swiper-slide-text-4 p {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-4 h1 {
+            font-size: 0.4em;
+        }
+        
+        .swiper-slide-text-5 {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            width: 25vw;
+            background-color: black;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            right: 2%;
+            top: 2%;
+        }
+        
+        .swiper-slide-text-5 p {
+            font-size: 0.38em;
+        }
+        
+        .swiper-slide-text-5 h1 {
+            font-size: 0.4em;
         }
         
         p {
             margin: 10px;
-            font-size: 1.4em;
             text-align: justify;
             font-family: "Open Sans", sans-serif;
         }
@@ -186,10 +232,6 @@
         .body-text {
             background-color: #ddd;
             border-radius: 5px;
-        }
-        
-        header {
-            padding: 1vw;
         }
         
         footer {
@@ -200,44 +242,70 @@
     </style>
 </head>
 
-<header>
-    Search Bar
-</header>
 
 <body>
     <ul class="navbar">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="sidenav-content">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <li class="sidenav-button" onclick="openNav()">&#9776;</li>
         <li><a class="btn active" href="index.html" target="_self">Home</a></li>
         <li><a href="GALLERY.html" target="_self">Top Sellers</a></li>
         <li><a href="CONTACT.html" target="_self">Contact</a></li>
+        <li class="shop-title"> ARAM </li>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search Items" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </ul>
 
+    <div class="body-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo ut, facilisis
+            bibendum nisl. Donec scelerisque mollis tempus. Proin at gravida elit. Morbi malesuada risus ut libero dictum, vitae blandit metus lobortis. Nam faucibus, nisl nec rutrum commodo, tortor libero consequat nulla, eu elementum ante magna egestas
+            metus. Quisque eget ligula leo. Nam ornare eget ligula ut sollicitudin. Aenean nisi massa, accumsan porttitor lacus ornare, pulvinar euismod felis. Maecenas nec arcu mattis ex mattis facilisis. Proin dolor est, scelerisque non gravida vel,
+            aliquam non orci.
+        </p>
+    </div>
     <div class="swiper-container">
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url('./Images/Schoolmate-Band.png');">
-                    <div class="swiper-slide-text">Slide 1</div>
+                <div class="swiper-slide" style="background-image:url('./Images/nordwood-themes-Nv4QHkTVEaI-unsplash.jpg');">
+                    <div class="swiper-slide-text-1">
+                        <h1>Formal</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
+                            ut, facilisis bibendum nisl.
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-slide" style="background-image:url('./Images/Musicus!.png');">
-                    <div class="swiper-slide-text">Slide 2</div>
+                <div class="swiper-slide" style="background-image:url('./Images/toa-heftiba-KQ1n6HzSahY-unsplash.jpg');">
+                    <div class="swiper-slide-text-2">
+                        <h1>Formal</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
+                            ut, facilisis bibendum nisl.
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-slide" style="background-image:url('./Images/Two-Schoolmate-Girl-On-Stage.png');">
-                    <div class="swiper-slide-text">Slide 3</div>
+                <div class="swiper-slide" style="background-image:url('./Images/mikel-parera-xag0YpBqNfQ-unsplash.jpg');">
+                    <div class="swiper-slide-text-3">
+                        <h1>Formal</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
+                            ut, facilisis bibendum nisl.
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-slide" style="background-image:url('./Images/MC-Alone-With-Computer.png');">
-                    <div class="swiper-slide-text">Slide 4</div>
+                <div class="swiper-slide" style="background-image:url('./Images/gez-xavier-mansfield-b34E1vh1tYU-unsplash.jpg');">
+                    <div class="swiper-slide-text-4">
+                        <h1>Formal</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
+                            ut, facilisis bibendum nisl.
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-slide" style="background-image:url('./Images/Fuchan-Drummings.png');">
-                    <div class="swiper-slide-text">Slide 5</div>
+                <div class="swiper-slide" style="background-image:url('./Images/hannah-morgan-ycVFts5Ma4s-unsplash.jpg');">
+                    <div class="swiper-slide-text-5">
+                        <h1>Formal</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
+                            ut, facilisis bibendum nisl.
+                        </p>
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -267,6 +335,7 @@
     <script type="text/javascript">
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 0,
+            effect: "fade",
             centeredSlides: true,
             autoplay: {
                 delay: 4000,
@@ -281,18 +350,6 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("body-text").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("body-text").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
-        }
     </script>
 </body>
 
