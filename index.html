@@ -17,12 +17,12 @@
             background-color: white;
         }
         
-        ul {
+        ul.navbar {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: rgb(38, 29, 29, 0.8);
+            background-image: linear-gradient(180deg, rgb(48, 45, 45), black);
             position: -webkit-sticky;
             position: sticky;
             top: 0;
@@ -42,10 +42,11 @@
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
             font-size: 1.4vw;
+            text-shadow: 1px 1px 2px wheat;
         }
         
         li a:hover {
-            background-color: #111;
+            background-image: linear-gradient(rgb(75, 70, 70), black);
         }
         
         @media screen and (max-width: 400px) {
@@ -53,6 +54,93 @@
                 float: none;
                 width: 100%;
             }
+        }
+        
+        .sidenav {
+            box-sizing: border-box;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: whitesmoke;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 1px solid black;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: rgb(28, 28, 184);
+            background-color: rgb(199, 194, 194);
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            padding: 14.73px 16px;
+            font-size: 1.8vw;
+            margin-left: 50px;
+        }
+        
+        .closebtn:hover {
+            background-image: linear-gradient(rgb(75, 70, 70), black);
+        }
+        
+        .closebtn {
+            background-image: linear-gradient(180deg, rgb(48, 45, 45), black);
+            color: white !important;
+            float: right;
+            display: block;
+            width: 100%;
+            left: 120px;
+            border-radius: 60em/100em;
+            z-index: 2
+        }
+        
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        .sidenav-button:hover {
+            background-image: linear-gradient(rgb(75, 70, 70), black);
+        }
+        
+        .sidenav-button {
+            box-sizing: border-box;
+            padding: 11px 16px;
+            font-size: 2vw;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .btn.active {
+            background-color: #111;
+            color: white;
+        }
+        
+        .sidenav-content a {
+            color: black;
         }
         
         .swiper-container {
@@ -103,15 +191,32 @@
         header {
             padding: 1vw;
         }
+        
+        footer {
+            padding: 1vw;
+            border-top: 1px solid black;
+            background-image: linear-gradient()
+        }
     </style>
 </head>
+
 <header>
     Search Bar
 </header>
 
 <body>
     <ul class="navbar">
-        <li><a class="btn active" href="HOME.html" target="_self">Home</a></li>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="sidenav-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <li class="sidenav-button" onclick="openNav()">&#9776;</li>
+        <li><a class="btn active" href="index.html" target="_self">Home</a></li>
         <li><a href="GALLERY.html" target="_self">Top Sellers</a></li>
         <li><a href="CONTACT.html" target="_self">Contact</a></li>
     </ul>
@@ -151,6 +256,11 @@
             aliquam non orci.
         </p>
     </div>
+    <footer>
+
+        Other Contacts:
+
+    </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -171,6 +281,18 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("body-text").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("body-text").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
     </script>
 </body>
 
