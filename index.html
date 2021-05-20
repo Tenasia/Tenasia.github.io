@@ -9,246 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: white;
-        }
-        
-        ul.navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-image: linear-gradient(180deg, rgb(48, 45, 45), black);
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 2;
-        }
-        
-        li {
-            float: left;
-        }
-        
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-family: 'Oswald', sans-serif;
-            font-weight: bold;
-            font-size: 1.4vw;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        }
-        
-        li a:hover {
-            background-image: linear-gradient(rgb(75, 70, 70), black);
-            text-decoration: underline;
-        }
-        
-        @media screen and (max-width: 400px) {
-            .li a {
-                float: none;
-                width: 100%;
-            }
-        }
-        
-        .search-container button {
-            float: right;
-            padding: 6px 10px;
-            margin-top: 10px;
-            margin-right: 16px;
-            background: #ddd;
-            font-size: 1.6vw;
-            border: none;
-            cursor: pointer;
-            border: 2px groove black;
-        }
-        
-        .search-container {
-            float: right;
-        }
-        
-        input[type=text] {
-            font-family: 'Open Sans', sans-serif;
-            padding: 6px;
-            margin-top: 10px;
-            font-size: 1.4vw;
-            border: 2px groove black;
-        }
-        
-        .shop-title {
-            position: relative;
-            font-family: 'Archivo', sans-serif;
-            color: white;
-            left: 25%;
-            margin-top: 1vw;
-            font-size: 1.9em;
-            letter-spacing: 0.2em;
-        }
-        
-        .swiper-container {
-            width: 100%;
-            height: 80vh;
-        }
-        
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            background-color: #ccc;
-            justify-content: center;
-            align-items: center;
-            font-size: 60px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .swiper-slide-text-1 {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            width: 25vw;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            left: 2%;
-            top: 2%;
-        }
-        
-        .swiper-slide-text-1 p {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-1 h1 {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-2 {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            width: 23vw;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            right: 2%;
-            top: 2%;
-        }
-        
-        .swiper-slide-text-2 p {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-2 h1 {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-3 {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            width: 80vw;
-            height: 20vh;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            bottom: -1%;
-        }
-        
-        .swiper-slide-text-3 p {
-            font-size: 0.3em;
-        }
-        
-        .swiper-slide-text-3 h1 {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-4 {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            width: 25vw;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            left: 2%;
-            top: 2%;
-        }
-        
-        .swiper-slide-text-4 p {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-4 h1 {
-            font-size: 0.4em;
-        }
-        
-        .swiper-slide-text-5 {
-            position: absolute;
-            margin: 0px;
-            padding: 0px;
-            width: 25vw;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-            right: 2%;
-            top: 2%;
-        }
-        
-        .swiper-slide-text-5 p {
-            font-size: 0.38em;
-        }
-        
-        .swiper-slide-text-5 h1 {
-            font-size: 0.4em;
-        }
-        
-        p {
-            margin: 10px;
-            text-align: justify;
-            font-family: "Open Sans", sans-serif;
-        }
-        
-        .body-text {
-            background-color: #ddd;
-            border-radius: 5px;
-        }
-        
-        footer {
-            padding: 1vw;
-            border-top: 1px solid black;
-            background-image: linear-gradient()
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/MainStyles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 
 <body>
     <ul class="navbar">
-        <li><a class="btn active" href="index.html" target="_self">Home</a></li>
-        <li><a href="GALLERY.html" target="_self">Top Sellers</a></li>
-        <li><a href="CONTACT.html" target="_self">Contact</a></li>
-        <li class="shop-title"> ARAM </li>
+        <li class="btn">
+            <a href="index.html"><span class="material-icons-outlined">
+                <img src="./Images/outline_home_white_24dp.png" style="width:2vw; padding-top:2px;">
+                </span></a>
+        </li>
+        <li class="shop-title"> ARAM</li>
+        <div class="apparel-clothes">
+            <li><a href="index.html" target="_self">MEN</a></li>
+            <li><a href="GALLERY.html" target="_self">WOMEN</a></li>
+            <li><a href="CONTACT.html" target="_self">LUXURY</a></li>
+            <li><a href="" target="_self">KIDS</a></li>
+            <li><a href="" target="_self">BEAUTY</a></li>
+        </div>
+
         <div class="search-container">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search Items" name="search">
@@ -256,20 +36,12 @@
             </form>
         </div>
     </ul>
-
-    <div class="body-text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo ut, facilisis
-            bibendum nisl. Donec scelerisque mollis tempus. Proin at gravida elit. Morbi malesuada risus ut libero dictum, vitae blandit metus lobortis. Nam faucibus, nisl nec rutrum commodo, tortor libero consequat nulla, eu elementum ante magna egestas
-            metus. Quisque eget ligula leo. Nam ornare eget ligula ut sollicitudin. Aenean nisi massa, accumsan porttitor lacus ornare, pulvinar euismod felis. Maecenas nec arcu mattis ex mattis facilisis. Proin dolor est, scelerisque non gravida vel,
-            aliquam non orci.
-        </p>
-    </div>
     <div class="swiper-container">
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image:url('./Images/nordwood-themes-Nv4QHkTVEaI-unsplash.jpg');">
                     <div class="swiper-slide-text-1">
-                        <h1>Formal</h1>
+                        <h1>Men</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
                             ut, facilisis bibendum nisl.
                         </p>
@@ -277,7 +49,7 @@
                 </div>
                 <div class="swiper-slide" style="background-image:url('./Images/toa-heftiba-KQ1n6HzSahY-unsplash.jpg');">
                     <div class="swiper-slide-text-2">
-                        <h1>Formal</h1>
+                        <h1>Women</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
                             ut, facilisis bibendum nisl.
                         </p>
@@ -285,7 +57,7 @@
                 </div>
                 <div class="swiper-slide" style="background-image:url('./Images/mikel-parera-xag0YpBqNfQ-unsplash.jpg');">
                     <div class="swiper-slide-text-3">
-                        <h1>Formal</h1>
+                        <h1>Luxury</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
                             ut, facilisis bibendum nisl.
                         </p>
@@ -293,7 +65,7 @@
                 </div>
                 <div class="swiper-slide" style="background-image:url('./Images/gez-xavier-mansfield-b34E1vh1tYU-unsplash.jpg');">
                     <div class="swiper-slide-text-4">
-                        <h1>Formal</h1>
+                        <h1>Kids</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
                             ut, facilisis bibendum nisl.
                         </p>
@@ -301,7 +73,7 @@
                 </div>
                 <div class="swiper-slide" style="background-image:url('./Images/hannah-morgan-ycVFts5Ma4s-unsplash.jpg');">
                     <div class="swiper-slide-text-5">
-                        <h1>Formal</h1>
+                        <h1>Beauty</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra dui non porttitor convallis. Donec hendrerit sem lorem, sit amet posuere mauris posuere id. Integer vitae fringilla orci. Nullam sapien sem, laoreet ac justo
                             ut, facilisis bibendum nisl.
                         </p>
@@ -324,10 +96,24 @@
             aliquam non orci.
         </p>
     </div>
-    <footer>
 
-        Other Contacts:
-
+    <footer id="footer" class="footer">
+        <div class="container" <div class="hm-footer-copyright text-center">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.pinterest.ph/"><i class="fa fa-pinterest"></i></a>
+            </div>
+            <p>
+                <a href="https://www.youtube.com/watch?v=Lrj2Hq7xqQ8"> I Dare You To Click Me</a>
+            </p>
+        </div>
+        </div>
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
