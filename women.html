@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="CSS/font-awesome.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+            padding: 0px;
+            margin: 0px;
+            font-family: "Open Sans", sans-serif;
+        }
+        
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+        
+        .column {
+            display: none;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #ddd;
+        }
+        
+        .btn.active {
+            background-color: rgb(78, 78, 78);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="navbar-1">
+        <li class="btn-1">
+            <a href="index.html">
+                <img class="img-home" src="./Images/outline_home_white_24dp.png" style="width:2vw; padding:0px !important;">
+            </a>
+        </li>
+        <li class="shop-title-1"> ARAM </li>
+        <div class="apparel-clothes responsive">
+            <li><a href="men.html" target="_self">MEN</a></li>
+            <li><a class="active-link" href="women.html" target="_self">WOMEN</a></li>
+            <li><a href="luxury.html" target="_self">LUXURY</a></li>
+            <li><a href="kids.html" target="_self">KIDS</a></li>
+            <li><a href="beauty.html" target="_self">BEAUTY</a></li>
+        </div>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" class="" placeholder="Search Items" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </ul>
+
+    <center>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">
+          Show all
+        </button>
+            <button class="btn" onclick="filterSelection('Traditional')">
+          Traditional
+        </button>
+            <button class="btn" onclick="filterSelection('Digital')">
+          Digital
+        </button>
+            <button class="btn" onclick="filterSelection('Story Teller')">
+          Story Teller
+        </button>
+        </div>
+    </center>
+
+
+    <section id="new-arrivals" class="new-arrivals">
+        <div class="container">
+            <div class="section-header">
+                <h2>new arrivals</h2>
+            </div>
+            <div class="new-arrivals-content">
+                <div class="row">
+                    <div class="column Traditional">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="single-new-arrival">
+                                <div class="single-new-arrival-bg">
+                                    <img src="./Images/1.jpg" alt="new-arrivals images">
+                                    <div class="single-new-arrival-bg-overlay"></div>
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-cart"></span>
+                                            <a href="#">add <span>to </span> cart</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <span class="lnr lnr-heart"></span>
+                                            <span class="lnr lnr-frame-expand"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <h4><a href="#">Watch</a></h4>
+                                <p class="arrival-product-price">$65.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column Digital">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="single-new-arrival">
+                                <div class="single-new-arrival-bg">
+                                    <img src="./Images/2.jpg" alt="new-arrivals images">
+                                    <div class="single-new-arrival-bg-overlay"></div>
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-cart"></span>
+                                            <a href="#">add <span>to </span> cart</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <span class="lnr lnr-heart"></span>
+                                            <span class="lnr lnr-frame-expand"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <h4><a href="#">Shoe</a></h4>
+                                <p class="arrival-product-price">$65.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column Story Teller">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="single-new-arrival">
+                                <div class="single-new-arrival-bg">
+                                    <img src="./Images/3.jpg" alt="new-arrivals images">
+                                    <div class="single-new-arrival-bg-overlay"></div>
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-cart"></span>
+                                            <a href="#">add <span>to </span> cart</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <span class="lnr lnr-heart"></span>
+                                            <span class="lnr lnr-frame-expand"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <h4><a href="#">heels</a></h4>
+                                <p class="arrival-product-price">$65.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column Traditional">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="single-new-arrival">
+                                <div class="single-new-arrival-bg">
+                                    <img src="./Images/5.jpg" alt="new-arrivals images">
+                                    <div class="single-new-arrival-bg-overlay"></div>
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-cart"></span>
+                                            <a href="#">add <span>to </span> cart</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <span class="lnr lnr-heart"></span>
+                                            <span class="lnr lnr-frame-expand"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <h4><a href="#">Dress</a></h4>
+                                <p class="arrival-product-price">$65.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="hm-footer-copyright text-center">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i
+            ></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i
+            ></a>
+                    <a href="https://www.pinterest.ph/"><i class="fa fa-pinterest"></i
+            ></a>
+                </div>
+                <p>
+                    <a class="About-Us" href="https://www.youtube.com/watch?v=Lrj2Hq7xqQ8">
+              About Us</a
+            >
+          </p>
+        </div>
+      </div>
+      <div id="scroll-Top">
+        <div class="return-to-top">
+          <i
+            class="fa fa-angle-up"
+            id="scroll-top"
+            data-toggle="tooltip"
+            data-placement="top"
+            title=""
+            data-original-title="Back to Top"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Javascripts/GALLERY.js"></script>
+  </body>
+</html>

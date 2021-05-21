@@ -18,6 +18,7 @@ ul.navbar {
     position: sticky;
     top: 0;
     z-index: 2;
+    margin-bottom: 3vh;
 }
 
 li {
@@ -37,7 +38,7 @@ li a {
 }
 
 li a:hover {
-    background-image: linear-gradient(rgb(75, 70, 70), black);
+    background-image: linear-gradient(rgb(75, 70, 70), black) !important;
     text-decoration: underline;
 }
 
@@ -88,7 +89,7 @@ input[type=text] {
 }
 
 .apparel-clothes {
-    margin-left: 35% !important;
+    margin-left: 35%;
 }
 
 .swiper-container {
@@ -119,6 +120,7 @@ input[type=text] {
     font-size: 60px;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .swiper-slide-text-1 {
@@ -230,4 +232,48 @@ p {
 .body-text {
     border-radius: 5px;
     font-size: 1.4em;
+}
+
+.footer {
+    background: #f8f9fd;
+    display: flex;
+    align-items: center;
+    height: 154px;
+    position: relative;
+    padding-left: 46.75%;
+}
+
+.hm--copyright p,
+.hm-footer-copyright p a {
+    color: #a5adb3;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-social a i {
+    color: #a4aaaf;
+    margin: 0 18px 24px 0;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.footer-social i:hover {
+    color: #e99c2e;
+}
+
+.About-Us {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.About-Us:hover {
+    color: #e99c2e !important;
+    text-decoration: underline;
 }
