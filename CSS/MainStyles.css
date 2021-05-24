@@ -136,7 +136,7 @@ input[type=text] {
 }
 
 .swiper-slide-text-1 p {
-    font-size: 1.75vw;
+    font-size: 1.6vw;
 }
 
 .swiper-slide-text-1 h1 {
@@ -147,7 +147,7 @@ input[type=text] {
     position: absolute;
     margin: 0px;
     padding: 0px;
-    width: 23vw;
+    width: 22vw;
     background-color: black;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -238,8 +238,8 @@ p {
     background: #f8f9fd;
     display: flex;
     align-items: center;
-    height: 154px;
     position: relative;
+    height: 154px;
     padding-left: 46.75%;
 }
 
@@ -276,4 +276,49 @@ p {
 .About-Us:hover {
     color: #e99c2e !important;
     text-decoration: underline;
+}
+
+.wrapper-side {
+    margin-top: 1.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-side,
+.sidebar-side {
+    padding: 15px;
+}
+
+.main-side {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5%;
+}
+
+.sidebar-side {
+    width: 25%;
+    height: 25vh;
+    min-height: 600px;
+    top: 9.5%;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #dfdfdf;
+    z-index: 1;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.main-side p {
+    font-size: 1.2em;
+}
+
+.main-side h1 {
+    font-family: Oswald, sans-serif;
+}
+
+.body-images {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
