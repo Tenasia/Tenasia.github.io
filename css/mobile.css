@@ -68,7 +68,7 @@ strong {
 
 .hero-text-profile {
     width: 100%;
-    margin-left: 0;
+    margin: auto;
 }
 
 .hero-icons img {
@@ -114,6 +114,7 @@ h6 {
 .hero-text-title-and-hero-icons {
     float: none;
     margin: auto;
+    padding: 0px;
 }
 
 table img {
@@ -122,6 +123,10 @@ table img {
 
 th img {
     margin: 10px 20px 10px 20px;
+}
+
+.first-icon {
+    margin: 10px 0px 10px 20px;
 }
 
 td {
