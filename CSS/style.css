@@ -151,8 +151,10 @@ h2 {
 
 .hero-icons img {
     border-radius: 0;
-    margin-right: 50px;
-    margin-left: 50px;
+}
+
+table {
+    width: 1px;
 }
 
 .first-icon {
