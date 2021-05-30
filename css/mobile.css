@@ -1,0 +1,192 @@
+/*
+ * General/Utility Styles
+*/
+
+* {
+    -moz-box-sizing: border-box;
+    /* Firexfox */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box;
+    /* IE */
+}
+
+body {
+    margin: 0;
+    background: rgb(245, 245, 245);
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 0.875rem;
+    color: rgb(86, 90, 92);
+}
+
+.container {
+    white-space: normal;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    font-weight: bold;
+    color: rgb(255, 89, 95);
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+/*
+ * Button styles
+*/
+
+.button {
+    background: rgb(255, 89, 95);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75rem 5rem;
+    border-bottom: 1px solid rgb(227, 25, 29);
+    border-radius: 2px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+    border-bottom: 1px solid #DCE0E0;
+}
+
+.hero-text-profile {
+    width: 100%;
+    margin-left: 0;
+}
+
+.hero-text-profile p {
+    margin: 5px auto;
+}
+
+.hero-text-title {
+    float: none;
+    padding: 0;
+}
+
+.hero-text-title h2,
+h6 {
+    margin: 5px auto;
+}
+
+.hero-text-profile h2,
+.hero-text-profile h6 {
+    float: none;
+}
+
+.hero-text-profile-image {
+    float: none;
+    display: inline;
+    text-align: center;
+    margin: auto;
+}
+
+.hero-text-title-and-hero-icons {
+    float: none;
+}
+
+table img {
+    border-radius: 0;
+}
+
+.book-section {
+    width: 80%;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.book-section h1 {
+    margin: 20px auto 20px auto;
+}
+
+.about a>p {
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+.about {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 20px;
+    border-bottom: 1px solid #DCE0E0;
+}
+
+.about a {
+    display: inline;
+    width: 10%;
+}
+
+.care-section {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px solid #DCE0E0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: fit-content;
+}
+
+.care-section span {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+
+.care-section span {
+    float: none;
+}
+
+.second-tab {
+    float: none;
+    width: 260px;
+}
+
+.game-section {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px solid #DCE0E0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: fit-content;
+}
+
+.game-section span {
+    float: none;
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+
+.dog-section {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1px solid #DCE0E0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dog-section img {
+    margin: 20px 0 20px 0;
+    width: 100%;
+    height: auto;
+}
